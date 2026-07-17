@@ -90,6 +90,13 @@ npm run dev
 - TRAE：`http://127.0.0.1:5173/trae/`（根路径默认也是 TRAE）
 - Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
 
+在线演示：
+
+- TRAE：<http://38.76.205.234/trae/>
+- Jufcloud 二次元 3D：<http://38.76.205.234/jufcloud/>
+
+两个 Demo 右侧的“原网站”按钮会在新标签页打开对应参考站。服务器使用 [`deploy/nginx-recreate-demo.conf`](./deploy/nginx-recreate-demo.conf) 提供静态文件和 SPA 路由回退；部署验收记录见 [`evidence/deployment-fidelity-ledger.md`](./evidence/deployment-fidelity-ledger.md)。
+
 质量检查：
 
 ```bash
@@ -115,6 +122,7 @@ src/                       # TRAE 与 Jufcloud 两个 React 横幅样例
 public/assets/jufcloud/    # Jufcloud 验证样例公开页面资产
 evidence/reference/        # 参考页同视口证据
 evidence/rendered/         # 本地实现截图和差异图
+deploy/                    # 不含凭据的 Nginx 部署配置
 AGENTS.md                  # 项目工作和验收约束
 ```
 
