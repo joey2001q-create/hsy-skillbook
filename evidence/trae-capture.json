@@ -1,0 +1,62 @@
+{
+  "sourceUrl": "https://www.trae.cn/",
+  "capturedAt": "2026-07-17T17:30:00+08:00",
+  "scope": "Homepage header and first hero only",
+  "referenceViewports": [
+    {
+      "viewport": "1440x900",
+      "content": "1425x891",
+      "path": "reference/trae-1440x900.png"
+    },
+    {
+      "viewport": "1266x1288",
+      "content": "1251x1273",
+      "path": "reference/trae-1266x1288.png"
+    },
+    {
+      "viewport": "390x844",
+      "content": "375x812",
+      "path": "reference/trae-390x844.png"
+    }
+  ],
+  "runtime": {
+    "heroCanvas": 1,
+    "heroEngine": "three.js r176",
+    "observedPipeline": "fluid noise shader -> brightness adjustment -> pixelation shader -> vertical dark overlay",
+    "pixelSize": 5,
+    "pixelGap": 2,
+    "threshold": 0.87,
+    "green": "#32f08c",
+    "mouseRadius": 0.3,
+    "mouseStrength": 1.3
+  },
+  "visibleCopy": [
+    "TRAE",
+    "智能无限，协作无间",
+    "TRAE Work：全新上线的智能工作助手",
+    "TRAE IDE：你的专属 AI 开发工程师",
+    "下载 TRAE Work",
+    "下载 TRAE IDE",
+    "TRAE Work 网页版"
+  ],
+  "interactions": [
+    {
+      "input": "pointer move",
+      "expected": "Pixels around the pointer exchange green and white colors while the fluid field continues animating"
+    },
+    {
+      "input": "mobile menu click",
+      "expected": "Navigation opens and aria-expanded becomes true"
+    },
+    {
+      "input": "download button click",
+      "expected": "The local demo records the selected product without starting an external download"
+    }
+  ],
+  "responsive": {
+    "desktopBreakpoint": 1280,
+    "desktop": "Full navigation and bottom split hero",
+    "tablet": "Logo and menu button with bottom split hero",
+    "mobile": "Logo and menu button, title at top, downloads at bottom"
+  }
+}

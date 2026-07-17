@@ -2,9 +2,11 @@
 
 一个面向交互级网页复刻的 Codex Skill。输入可以是公开 URL、截图、录屏、Figma 或现有源码；输出是可维护的前端项目、交互回放证据和同视口视觉差异报告。
 
-仓库同时包含一个真实验证样例：根据 [jufcloud.com](https://www.jufcloud.com/) 当前公开页面重新实现的首屏横幅，覆盖导航、角色、标题、按钮、鼠标 3D 视差、角色浮动和目标站的固定宽度移动端表现。样例不复刻横幅以下的产品与页尾内容。
+仓库同时包含两个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差。两个样例都只复刻横幅，不包含后续页面内容。
 
-![复刻页面桌面首屏](./evidence/rendered/jufcloud-mouse-left.png)
+![复刻页面桌面首屏](./evidence/rendered/trae-route-1440x900.png)
+
+![Jufcloud 二次元 3D 横幅](./evidence/rendered/jufcloud-route-1440x900.png)
 
 ## Skill 能力
 
@@ -48,24 +50,31 @@ flowchart LR
 
 Skill 的硬性流程和验收门槛见 [`SKILL.md`](./skills/recreate-webpage/SKILL.md)。
 
-## Jufcloud 验证样例
+## TRAE 验证样例
 
-目标横幅实测不是 Canvas 或 WebGL，而是 CSS 3D 分层页面：
+目标横幅实测为 Three.js WebGL Shader 管线：
 
-- 鼠标 X/Y 映射为首屏容器的 `rotateY/rotateX`
-- 角色有独立 7 秒浮动动画
-- 公开资源包含角色 PNG、标题 PNG、PCB 纹理和斜切 SVG
-- 目标站移动端保持固定宽度，因此呈现局部裁切；样例按参考行为复现
+- 流体噪声 Shader 持续生成绿白场
+- 5px 像素块、2px 间隙和亮度阈值形成点阵形态
+- 鼠标在 0.3 归一化半径内交换绿白像素
+- `1280px` 以上显示完整导航，移动端使用标题置顶和下载区置底布局
 
 同尺寸截图比较结果：
 
 | 状态 | 相似度 |
 | --- | ---: |
-| 鼠标左侧视差 | 94.46% |
-| 鼠标右侧视差 | 94.67% |
-| 移动端固定宽度裁切 | 91.13% |
+| 桌面 1440x900 | 98.21% |
+| 截图视口 1266x1288 | 97.24% |
+| 移动端 390x844 | 95.43% |
 
-完整证据和差异说明见 [`evidence/fidelity-ledger.md`](./evidence/fidelity-ledger.md)。这些分数用于定位视觉差异，不等同于对功能、内容权利或生产可用性的评价。
+完整证据和差异说明见 [`evidence/trae-fidelity-ledger.md`](./evidence/trae-fidelity-ledger.md)。这些分数用于定位视觉差异，不等同于对功能、内容权利或生产可用性的评价。
+
+## Jufcloud 二次元 3D 样例
+
+- 角色、阴影、标题、线路板、白色斜面和光效使用独立图层
+- 鼠标 X/Y 映射为横幅的 `rotateY/rotateX`，并保留角色 7 秒浮动动画
+- 在 `1440x900`、鼠标 `(1340, 180)` 状态下，独立路由截图相似度为 99.04%
+- 完整参考和早期差异记录见 [`evidence/fidelity-ledger.md`](./evidence/fidelity-ledger.md)
 
 ## 运行样例
 
@@ -76,7 +85,10 @@ npm install
 npm run dev
 ```
 
-浏览器打开 `http://127.0.0.1:5173/`。
+浏览器入口：
+
+- TRAE：`http://127.0.0.1:5173/trae/`（根路径默认也是 TRAE）
+- Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
 
 质量检查：
 
@@ -90,17 +102,17 @@ npm run build
 ```bash
 python -m pip install pillow
 python skills/recreate-webpage/scripts/compare_images.py \
-  evidence/reference/jufcloud-mouse-left.png \
-  evidence/rendered/jufcloud-mouse-left.png \
-  --diff evidence/rendered/jufcloud-mouse-left-diff.png
+  evidence/reference/trae-1440x900.png \
+  evidence/rendered/trae-1440x900.png \
+  --diff evidence/rendered/trae-1440x900-diff.png
 ```
 
 ## 目录
 
 ```text
 skills/recreate-webpage/   # 可安装 Skill、脚本和参考规范
-src/                       # Jufcloud React 复刻样例
-public/assets/jufcloud/    # 验证样例引用的公开页面资产
+src/                       # TRAE 与 Jufcloud 两个 React 横幅样例
+public/assets/jufcloud/    # Jufcloud 验证样例公开页面资产
 evidence/reference/        # 参考页同视口证据
 evidence/rendered/         # 本地实现截图和差异图
 AGENTS.md                  # 项目工作和验收约束
@@ -110,4 +122,4 @@ AGENTS.md                  # 项目工作和验收约束
 
 本项目用于技术研究、授权复刻和视觉回归验证。不要使用 Skill 绕过登录、验证码、付费墙、反自动化或访问控制。
 
-`public/assets/jufcloud` 中的品牌、角色和页面资产来源于目标公开网页，仅用于本次高保真验证样例；它们不因进入本仓库而自动获得开源再分发许可。公开发布、商用或二次分发前应确认权利归属，或替换为自有资产。
+TRAE 样例的动态背景由本项目重新实现，不包含目标站的模型、视频或截图资产。页面名称、Logo 文字和可见产品文案仍属于其各自权利人；公开发布、商用或二次分发前应确认使用范围或替换为自有品牌内容。仓库中保留的早期 Jufcloud 验证资产同样不自动获得开源再分发许可。
