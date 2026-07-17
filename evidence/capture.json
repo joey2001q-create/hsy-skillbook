@@ -1,0 +1,36 @@
+{
+  "source_url": "https://www.jufcloud.com/",
+  "captured_at": "2026-07-17T16:00:00+08:00",
+  "canonical_viewport": {
+    "width": 1440,
+    "height": 900,
+    "content_width": 1425,
+    "screenshot_height": 891
+  },
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844,
+    "content_width": 375,
+    "screenshot_height": 812
+  },
+  "document": {
+    "title": "桔风云 - 香港VPS、美国高防VPS、美国cera大宽带VPS提供商",
+    "reference_document_scroll_height": 4443,
+    "replica_scope": "hero-banner-only",
+    "canvas_count": 0,
+    "webgl_detected": false
+  },
+  "pointer_states": [
+    { "name": "left", "x": 100, "y": 450 },
+    { "name": "right", "x": 1340, "y": 180 }
+  ],
+  "scroll_states": [],
+  "asset_summary": {
+    "images_observed": 19,
+    "images_used_for_scope": 9,
+    "stylesheets": 1,
+    "scripts_observed": 2,
+    "videos": 0,
+    "fonts": 0
+  }
+}

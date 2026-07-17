@@ -1,0 +1,110 @@
+:root {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  color: #222;
+  background: #2f7ddb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --blue: #2f7ddb;
+  --pale-blue: #d6e5f8;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--blue); scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; overflow-x: hidden; }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p { margin: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.layout { width: 1120px; margin: 0 auto; }
+.site-stage { overflow: hidden; background: var(--blue); }
+
+.hero {
+  position: relative;
+  height: 1200px;
+  overflow: hidden;
+  color: #fff;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.hero-intro { animation: hero-drop 1s both; transform-style: preserve-3d; }
+.hero-scene {
+  position: relative;
+  height: 100vh;
+  min-height: 760px;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.hero-scene > * { transform-style: preserve-3d; }
+.site-header { position: relative; z-index: 10; height: 200px; overflow: hidden; padding: 60px 0; animation: header-in .3s ease both; }
+.header-layout { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+.site-logo {
+  display: block;
+  width: 210px;
+  height: 80px;
+  overflow: hidden;
+  color: transparent;
+  background: url('/assets/jufcloud/PanGu.svg') center no-repeat;
+  background-size: auto 60px;
+  user-select: none;
+}
+.site-header nav { display: flex; align-items: center; gap: 8px; padding: 20px; font-size: 24px; line-height: 40px; }
+.site-header nav a { display: inline-block; padding: 0 12px; color: #fff; text-shadow: 0 2px 0 rgba(0, 0, 0, .2); white-space: nowrap; }
+.site-header nav a:not(.account-link) { transition: opacity .2s ease; }
+.site-header nav a:not(.account-link):hover { opacity: .7; }
+.site-header nav .account-link {
+  margin-left: 24px;
+  border-radius: 7px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .8);
+  font-weight: 700;
+  text-shadow: none;
+  transition: background .3s ease, color .3s ease;
+}
+.site-header nav .account-link + .account-link { margin-left: 24px; }
+.site-header nav .account-link:hover { color: var(--blue); background: #fff; }
+
+.hero-title { position: absolute; z-index: 3; top: 270px; left: 50%; width: 560px; height: 220px; margin-left: -50px; transform: translateZ(100px); animation: title-in 1.3s both; pointer-events: none; }
+.title-line { position: absolute; display: block; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.title-line-one { top: 0; left: -30px; width: 540px; height: 115px; background-image: url('/assets/jufcloud/line-1.png'); }
+.title-line-one i { position: absolute; top: 0; left: 233px; width: 200px; height: 110px; background: url('/assets/jufcloud/moji-1.png') center / cover no-repeat; transform: translateZ(50px); }
+.title-line-two { top: 126px; left: 100px; width: 455px; height: 85px; background-image: url('/assets/jufcloud/line-2.png'); }
+.circuit-board { position: absolute; top: 0; left: 50%; width: 1128px; height: 821px; margin-left: -500px; background: url('/assets/jufcloud/pcb.png') center no-repeat; transform: translateZ(-300px) scale(1.2); pointer-events: none; }
+.hero-cut { position: absolute; top: 420px; left: 50%; width: 4000px; height: 1360px; margin-left: -2000px; background: url('/assets/jufcloud/step-1.svg') center / cover no-repeat; pointer-events: none; }
+.character-box { position: absolute; z-index: 2; top: 250px; left: 50%; width: 500px; height: 785px; margin-left: -590px; animation: character-enter 1s both; pointer-events: none; }
+.character, .character-shadow { position: absolute; top: 0; left: 0; width: 500px; height: 785px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.character { background-image: url('/assets/jufcloud/shell.png'); transform: translateZ(50px); animation: character-float 7s ease-in-out infinite; }
+.character-shadow { top: 40px; opacity: .3; background-image: url('/assets/jufcloud/shell-shadow.png'); transform: translateZ(1px); }
+.start-button {
+  position: absolute;
+  z-index: 5;
+  top: 560px;
+  left: 50%;
+  margin-left: -30px;
+  padding: 0 34px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 33.6px;
+  font-weight: 700;
+  line-height: 70px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, .8), 0 0 0 0 transparent;
+  transform: translateZ(150px);
+  transition: transform .3s ease, background .3s ease, color .3s ease;
+  animation: opacity-in 3s both;
+}
+.start-button:hover { color: var(--blue); background: #fff; transform: translateZ(180px); box-shadow: 0 0 0 4px rgba(255,255,255,.8), 0 20px 20px -10px rgba(255,0,255,.1); }
+.hero-light { position: absolute; top: 170px; left: 50%; width: 470px; height: 470px; margin-left: -235px; background: url('/assets/jufcloud/light.png') center / cover no-repeat; transform: translateZ(820px); pointer-events: none; }
+
+@keyframes header-in { from { opacity: 0; transform: translateY(-100px); } }
+@keyframes hero-drop { from, 30% { transform: translateY(-500px); } }
+@keyframes title-in { from, 50% { transform: translateZ(2000px); } }
+@keyframes character-enter { from, 30% { transform: translateX(-1000px) translateZ(200px) rotateY(-20deg) rotateZ(70deg); } }
+@keyframes character-float { 50% { transform: translateZ(50px) translateY(-4px); } }
+@keyframes opacity-in { from, 50% { opacity: 0; } from { transform: translateZ(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "交互网页复刻"
+  short_description: "从 URL、截图或 Figma 生成并验证高保真可交互前端"
+  default_prompt: "使用 $recreate-webpage 复刻这个网页，覆盖桌面、移动端和关键交互，并持续截图比较直到验收通过。"
