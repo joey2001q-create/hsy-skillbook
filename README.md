@@ -2,7 +2,7 @@
 
 一个面向交互级网页复刻的 Codex Skill。输入可以是公开 URL、截图、录屏、Figma 或现有源码；输出是可维护的前端项目、交互回放证据和同视口视觉差异报告。
 
-仓库同时包含两个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差。两个样例都只复刻横幅，不包含后续页面内容。
+仓库包含三个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差，Osty 使用 React/CSS 完整复刻创意作品集首页。
 
 ![复刻页面桌面首屏](./evidence/rendered/trae-route-1440x900.png)
 
@@ -89,13 +89,14 @@ npm run dev
 
 - TRAE：`http://127.0.0.1:5173/trae/`（根路径默认也是 TRAE）
 - Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
+- Osty 创意作品集首页：`http://127.0.0.1:5173/osty/`
 
 在线演示：
 
 - TRAE：<http://38.76.205.234/trae/>
 - Jufcloud 二次元 3D：<http://38.76.205.234/jufcloud/>
 
-两个 Demo 右侧的“原网站”按钮会在新标签页打开对应参考站。服务器使用 [`deploy/nginx-recreate-demo.conf`](./deploy/nginx-recreate-demo.conf) 提供静态文件和 SPA 路由回退；部署验收记录见 [`evidence/deployment-fidelity-ledger.md`](./evidence/deployment-fidelity-ledger.md)。
+Demo 的“原网站”按钮会在新标签页打开对应参考站。服务器使用 [`deploy/nginx-recreate-demo.conf`](./deploy/nginx-recreate-demo.conf) 提供静态文件和 SPA 路由回退；Osty 本地视觉验收见 [`evidence/osty-fidelity-ledger.md`](./evidence/osty-fidelity-ledger.md)。
 
 质量检查：
 
@@ -120,6 +121,7 @@ python skills/recreate-webpage/scripts/compare_images.py \
 skills/recreate-webpage/   # 可安装 Skill、脚本和参考规范
 src/                       # TRAE 与 Jufcloud 两个 React 横幅样例
 public/assets/jufcloud/    # Jufcloud 验证样例公开页面资产
+public/assets/osty/        # Osty 首页公开图片与字体资源
 evidence/reference/        # 参考页同视口证据
 evidence/rendered/         # 本地实现截图和差异图
 deploy/                    # 不含凭据的 Nginx 部署配置

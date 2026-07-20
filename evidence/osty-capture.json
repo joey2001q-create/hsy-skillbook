@@ -1,0 +1,75 @@
+{
+  "sourceUrl": "https://theme.madsparrow.me/osty/?storefront=envato-elements",
+  "capturedAt": "2026-07-20T13:58:55+08:00",
+  "scope": {
+    "routes": ["/osty/"],
+    "states": ["light", "dark", "search-open", "menu-open", "filter-open", "filter-design", "card-hover", "footer-ticker"],
+    "delivery": "React + TypeScript + Vite + native CSS"
+  },
+  "viewports": {
+    "desktop": {
+      "nominal": { "width": 1440, "height": 900, "deviceScaleFactor": 1 },
+      "screenshot": { "width": 1425, "height": 891 },
+      "referenceDocument": { "width": 1425, "height": 3307 },
+      "renderedDocument": { "width": 1425, "height": 3306 }
+    },
+    "mobile": {
+      "nominal": { "width": 390, "height": 844, "deviceScaleFactor": 1 },
+      "screenshot": { "width": 375, "height": 844 },
+      "referenceDocument": { "width": 375, "height": 5465 },
+      "renderedDocument": { "width": 375, "height": 5466 },
+      "renderedDesignFilterDocument": { "width": 375, "height": 2442 }
+    }
+  },
+  "copy": {
+    "heading": "A place to display your masterpiece",
+    "description": "Artists can display their masterpieces, and buyers can discover and purchase works that resonate with them.",
+    "primaryActions": ["Contact Me", "Discover Our Work"],
+    "categories": ["All Categories", "Creative", "Design", "Photo", "Style"],
+    "projects": ["The Dark Side", "Justice Robot", "Color Current", "Subsequent Sneeze", "Wiggly Finger", "Share Spark", "Random Risk", "Stream Shop", "Freezing Birthday"],
+    "footerHeading": "Let's make it happen."
+  },
+  "fonts": [
+    { "family": "Inter", "weights": [400, 600] },
+    { "family": "Poppins", "weights": [400, 500, 600, 700] }
+  ],
+  "tokens": {
+    "lightBackground": "rgb(245, 245, 245)",
+    "darkBackground": "rgb(36, 35, 35)",
+    "text": "rgb(38, 38, 38)",
+    "accent": "rgb(252, 202, 115)",
+    "cardRadiusDesktop": 24,
+    "buttonRadius": 14
+  },
+  "assetMappings": [
+    { "source": "Person-with-VR-Headset-m_f.png", "local": "/assets/osty/hero-vr.png" },
+    { "source": "Minimalist-Stone-Composition-m_f.png", "local": "/assets/osty/hero-stone.png" },
+    { "source": "Whimsical-Character-in-a-Jar-m_f.png", "local": "/assets/osty/hero-jar.png" },
+    { "source": "Three-Scoops-of-Ice-Cream-on-Spoons.webp", "local": "/assets/osty/hero-spoons.webp" },
+    { "source": "Green-Character-in-Yellow-Hoodie-m_f.png", "local": "/assets/osty/hero-character.png" },
+    { "source": "Colorful-Assortment-of-Macarons-and-Packaging.webp", "local": "/assets/osty/project-dark-side.webp" },
+    { "source": "nkLC12rAR56ibf4tRP0JYBiA.webp", "local": "/assets/osty/project-justice-robot.webp" },
+    { "source": "SPOA-Vintage-Camera-with-Dual-Viewfinders.webp", "local": "/assets/osty/project-color-current.webp" },
+    { "source": "Minimalist-Bottle-Against-Gradient-Background.webp", "local": "/assets/osty/project-subsequent-sneeze.webp" },
+    { "source": "Minimalist-White-Baseball-Cap.webp", "local": "/assets/osty/project-wiggly-finger.webp" },
+    { "source": "SleekCraft-Over-Ear-Headphones-in-Black-Yellow.webp", "local": "/assets/osty/project-share-spark.webp" },
+    { "source": "White-Sneakers-on-Blue-Background.webp", "local": "/assets/osty/project-random-risk.webp" },
+    { "source": "Stoic-Luxury-Brand-Boxes.webp", "local": "/assets/osty/project-stream-shop.webp" },
+    { "source": "Modern-Computer-Mouse-on-Beige-Background.webp", "local": "/assets/osty/project-freezing-birthday.webp" }
+  ],
+  "interactions": [
+    { "path": "Desktop pointer rest -> center sweep -> stop", "expected": "the three nearest hero images receive velocity-weighted displacement and rotation, then spring back in about 700ms", "evidence": ["reference/osty-hero-pointer-rest.png", "reference/osty-hero-pointer-center-immediate.png", "reference/osty-hero-pointer-center-250.png", "reference/osty-hero-pointer-center-950.png", "rendered/osty-hero-pointer-rest-v2.png", "rendered/osty-hero-pointer-center-immediate.png", "rendered/osty-hero-pointer-center-250.png", "rendered/osty-hero-pointer-center-950.png"] },
+    { "path": "Desktop All Categories -> Design", "expected": "the marker slides, old cards dim and close upward with stagger, the loader spins, the grid contracts, and two Design cards open downward with stagger", "evidence": ["reference/osty-filter-design-t000.png", "reference/osty-filter-design-t800.png", "reference/osty-filter-design-t1500.png", "reference/osty-filter-design-t3000.png", "reference/osty-filter-design-t5000.png", "rendered/osty-filter-design-t000.png", "rendered/osty-filter-design-t300.png", "rendered/osty-filter-design-t750.png", "rendered/osty-filter-design-t1250.png", "rendered/osty-filter-design-settled.png"] },
+    { "path": "Menu button -> compact navigation -> close", "expected": "aria-expanded toggles and the six-link panel opens/closes" },
+    { "path": "Theme toggle -> dark -> light", "expected": "background changes between rgb(245,245,245) and rgb(36,35,35)" },
+    { "path": "Search -> Design -> Enter", "expected": "two Design projects remain; clearing restores nine projects" },
+    { "path": "Mobile All filter -> Design", "expected": "panel closes, aria-busy returns to false, the document has no horizontal overflow, and two Design projects remain", "evidence": ["rendered/osty-mobile-filter-design-settled.png"] },
+    { "path": "Card pointer hover", "expected": "yellow pointer ring follows the pointer; card image remains geometrically stable" },
+    { "path": "Footer idle 700ms", "expected": "ticker transform advances continuously" },
+    { "path": "Load More", "expected": "Loading... transitions to disabled All Works Loaded" }
+  ],
+  "runtime": {
+    "reference": { "canvas": false, "webgl": false, "video": false, "observedLibraries": ["GSAP", "Locomotive Scroll", "Isotope"] },
+    "implementation": { "canvas": false, "webgl": false, "video": false, "mechanism": "semantic DOM, React state, requestAnimationFrame pointer velocity, and CSS clip-path/stagger animation" }
+  }
+}
