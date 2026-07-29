@@ -1,0 +1,4 @@
+interface:
+  display_name: "敏感内容打码"
+  short_description: "为图片和网页截图选择敏感区域、预览确认并执行安全打码"
+  default_prompt: "使用 $redact-sensitive-content 标记这张图片中的敏感区域，先给我编号预览，确认后再正式打码。"

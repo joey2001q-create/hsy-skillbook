@@ -1,0 +1,4 @@
+interface:
+  display_name: "故意做丑网页"
+  short_description: "从零生成或改造花哨、冲突、反协调但功能完整可用的网页"
+  default_prompt: "使用 $uglify-webpage 把这个需求做成一个花花绿绿、反协调但功能完整的网站。"

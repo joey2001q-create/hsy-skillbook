@@ -1,6 +1,26 @@
-# Recreate Webpage Skill
+# HSY Skillbook
 
-一个面向交互级网页复刻的 Codex Skill。输入可以是公开 URL、截图、录屏、Figma 或现有源码；输出是可维护的前端项目、交互回放证据和同视口视觉差异报告。
+一个由 HSY 维护的 Codex Skill 合集。每个 Skill 都放在独立目录中，包含可安装的 `SKILL.md`、按需加载的参考资料，以及完成真实任务所需的脚本或资源。
+
+## Skill 清单
+
+| Skill | 用途 | 路径 |
+| --- | --- | --- |
+| `recreate-webpage` | 从公开 URL、截图、录屏、Figma 或现有源码生成可维护、可交互、可验证的前端实现 | [`skills/recreate-webpage`](./skills/recreate-webpage) |
+| `redact-sensitive-content` | 对图片或网页截图中的指定区域、语义对象或非保留区域进行预览确认和安全打码 | [`skills/redact-sensitive-content`](./skills/redact-sensitive-content) |
+| `uglify-webpage` | 从零生成或改造花花绿绿、故意不协调、审美极差但功能正常的网页 | [`skills/uglify-webpage`](./skills/uglify-webpage) |
+
+## uglify-webpage
+
+`uglify-webpage` 坚持“视觉上故意失败，工程上必须成功”：通过可复现的 seed、1～5 级丑陋强度和六种反设计预设，有控制地制造色彩、字体、组件、间距、装饰与动效冲突，同时保留用户要求的功能和安全底线。详细流程见 [`SKILL.md`](./skills/uglify-webpage/SKILL.md)。
+
+## redact-sensitive-content
+
+`redact-sensitive-content` 使用“选择区域 → 编号预览 → 用户确认 → 正式打码 → 结果校验”的工作流，支持纯色遮挡、像素化、模糊和反向保留模式。详细流程见 [`SKILL.md`](./skills/redact-sensitive-content/SKILL.md)。
+
+## recreate-webpage
+
+`recreate-webpage` 面向交互级网页复刻，输出前端项目、交互回放证据和同视口视觉差异报告。
 
 仓库包含三个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差，Osty 使用 React/CSS 完整复刻创意作品集首页。
 
@@ -8,7 +28,7 @@
 
 ![Jufcloud 二次元 3D 横幅](./evidence/rendered/jufcloud-route-1440x900.png)
 
-## Skill 能力
+### 能力
 
 - 从 URL 采集 DOM、computed styles、字体、图片、SVG、视频和运行时特征
 - 记录 hover、点击、鼠标移动、滚动、拖拽和动画关键状态
@@ -18,7 +38,7 @@
 - 输出截图差异、质量门禁结果和有意偏差
 - 不以整页截图代替真实 UI
 
-## 安装 Skill
+### 安装
 
 仓库中的 Skill 位于 [`skills/recreate-webpage`](./skills/recreate-webpage)。本机开发时可以链接到 Codex Skill 目录：
 
@@ -34,7 +54,7 @@ ln -s "$(pwd)/skills/recreate-webpage" ~/.codex/skills/recreate-webpage
 以 1440x900 为桌面基准，并覆盖 390x844、鼠标视差、滚动动画和主要按钮状态。
 ```
 
-## 工作流程
+### 工作流程
 
 ```mermaid
 flowchart LR
@@ -118,14 +138,16 @@ python skills/recreate-webpage/scripts/compare_images.py \
 ## 目录
 
 ```text
-skills/recreate-webpage/   # 可安装 Skill、脚本和参考规范
-src/                       # TRAE 与 Jufcloud 两个 React 横幅样例
-public/assets/jufcloud/    # Jufcloud 验证样例公开页面资产
-public/assets/osty/        # Osty 首页公开图片与字体资源
-evidence/reference/        # 参考页同视口证据
-evidence/rendered/         # 本地实现截图和差异图
-deploy/                    # 不含凭据的 Nginx 部署配置
-AGENTS.md                  # 项目工作和验收约束
+skills/recreate-webpage/          # 可安装 Skill、脚本和参考规范
+skills/redact-sensitive-content/  # 图片与网页截图打码 Skill
+skills/uglify-webpage/            # 故意反协调但功能正常的网页 Skill
+src/                              # TRAE、Jufcloud 与 Osty React 样例
+public/assets/jufcloud/           # Jufcloud 验证样例公开页面资产
+public/assets/osty/               # Osty 首页公开图片与字体资源
+evidence/reference/               # 参考页同视口证据
+evidence/rendered/                # 本地实现截图和差异图
+deploy/                           # 不含凭据的 Nginx 部署配置
+AGENTS.md                         # 项目工作和验收约束
 ```
 
 ## 合规与资产说明
