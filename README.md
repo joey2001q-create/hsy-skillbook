@@ -14,6 +14,20 @@
 
 `uglify-webpage` 坚持“视觉上故意失败，工程上必须成功”：通过可复现的 seed、1～5 级丑陋强度和六种反设计预设，有控制地制造色彩、字体、组件、间距、装饰与动效冲突，同时保留用户要求的功能和安全底线。详细流程见 [`SKILL.md`](./skills/uglify-webpage/SKILL.md)。
 
+### 丑登录页案例
+
+使用默认 `rainbow-chaos` 预设、丑陋度 `4`、seed `8e43b9f572483b5d` 生成。案例保留邮箱校验、密码显隐、游客账号、加载和成功反馈，并通过桌面与移动端浏览器验收。完整记录见 [`evidence/ugly-login-ledger.md`](./evidence/ugly-login-ledger.md)。
+
+#### 桌面端 · 1440×900
+
+![rainbow-chaos 丑登录页桌面案例](./evidence/rendered/ugly-login-desktop-1440x900.png)
+
+#### 移动端 · 390×844
+
+<p align="center">
+  <img src="./evidence/rendered/ugly-login-mobile-390x844.png" alt="rainbow-chaos 丑登录页移动端案例" width="390">
+</p>
+
 ## redact-sensitive-content
 
 `redact-sensitive-content` 使用“选择区域 → 编号预览 → 用户确认 → 正式打码 → 结果校验”的工作流，支持纯色遮挡、像素化、模糊和反向保留模式。详细流程见 [`SKILL.md`](./skills/redact-sensitive-content/SKILL.md)。
