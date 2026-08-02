@@ -1,0 +1,4 @@
+interface:
+  display_name: "语言学习方案设计"
+  short_description: "诊断语言学习瓶颈并制定证据校正的英语与雅思训练方案"
+  default_prompt: "使用 $design-language-learning-plan 诊断我的英语学习瓶颈，并制定一份可执行的训练计划。"

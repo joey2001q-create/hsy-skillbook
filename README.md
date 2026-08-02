@@ -9,6 +9,18 @@
 | `recreate-webpage` | 从公开 URL、截图、录屏、Figma 或现有源码生成可维护、可交互、可验证的前端实现 | [`skills/recreate-webpage`](./skills/recreate-webpage) |
 | `redact-sensitive-content` | 对图片或网页截图中的指定区域、语义对象或非保留区域进行预览确认和安全打码 | [`skills/redact-sensitive-content`](./skills/redact-sensitive-content) |
 | `uglify-webpage` | 从零生成或改造花花绿绿、故意不协调、审美极差但功能正常的网页 | [`skills/uglify-webpage`](./skills/uglify-webpage) |
+| `design-language-learning-plan` | 诊断语言学习瓶颈，辨析学习方法证据，并制定可执行的英语或雅思训练方案 | [`skills/design-language-learning-plan`](./skills/design-language-learning-plan) |
+
+## design-language-learning-plan
+
+`design-language-learning-plan` 用能力维度诊断语言学习问题，区分有效机制、个人经验与未经证实的强数字，并通过“理解声音、情境绑定、撤掉辅助、直接理解、有约束输出与反馈”的闭环设计训练。它同时保留意义输入、意义输出、语言聚焦和流利度四条学习线，并提供雅思四科适配与阶段复盘指标。详细流程见 [`SKILL.md`](./skills/design-language-learning-plan/SKILL.md)。
+
+安装到个人 Codex Skill 目录：
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/skills/design-language-learning-plan" ~/.codex/skills/design-language-learning-plan
+```
 
 ## uglify-webpage
 
@@ -155,6 +167,7 @@ python skills/recreate-webpage/scripts/compare_images.py \
 skills/recreate-webpage/          # 可安装 Skill、脚本和参考规范
 skills/redact-sensitive-content/  # 图片与网页截图打码 Skill
 skills/uglify-webpage/            # 故意反协调但功能正常的网页 Skill
+skills/design-language-learning-plan/ # 语言学习诊断、证据边界与英语/雅思训练方案
 src/                              # TRAE、Jufcloud 与 Osty React 样例
 public/assets/jufcloud/           # Jufcloud 验证样例公开页面资产
 public/assets/osty/               # Osty 首页公开图片与字体资源
