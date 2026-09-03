@@ -11,34 +11,9 @@
 | `uglify-webpage` | 从零生成或改造花花绿绿、故意不协调、审美极差但功能正常的网页 | [`skills/uglify-webpage`](./skills/uglify-webpage) |
 | `design-language-learning-plan` | 诊断语言学习瓶颈，辨析学习方法证据，并制定可执行的英语或雅思训练方案 | [`skills/design-language-learning-plan`](./skills/design-language-learning-plan) |
 
-## design-language-learning-plan
-
-`design-language-learning-plan` 用能力维度诊断语言学习问题，区分有效机制、个人经验与未经证实的强数字，并通过“理解声音、情境绑定、撤掉辅助、直接理解、有约束输出与反馈”的闭环设计训练。它同时保留意义输入、意义输出、语言聚焦和流利度四条学习线，并提供雅思四科适配与阶段复盘指标。详细流程见 [`SKILL.md`](./skills/design-language-learning-plan/SKILL.md)。
-
-安装到个人 Codex Skill 目录：
-
-```bash
-mkdir -p ~/.codex/skills
-ln -s "$(pwd)/skills/design-language-learning-plan" ~/.codex/skills/design-language-learning-plan
-```
-
 ## uglify-webpage
 
 `uglify-webpage` 坚持“视觉上故意失败，工程上必须成功”：通过可复现的 seed、1～5 级丑陋强度和六种反设计预设，有控制地制造色彩、字体、组件、间距、装饰与动效冲突，同时保留用户要求的功能和安全底线。详细流程见 [`SKILL.md`](./skills/uglify-webpage/SKILL.md)。
-
-### 丑登录页案例
-
-使用默认 `rainbow-chaos` 预设、丑陋度 `4`、seed `8e43b9f572483b5d` 生成。案例保留邮箱校验、密码显隐、游客账号、加载和成功反馈，并通过桌面与移动端浏览器验收。完整记录见 [`evidence/ugly-login-ledger.md`](./evidence/ugly-login-ledger.md)。
-
-#### 桌面端 · 1440×900
-
-![rainbow-chaos 丑登录页桌面案例](./evidence/rendered/ugly-login-desktop-1440x900.png)
-
-#### 移动端 · 390×844
-
-<p align="center">
-  <img src="./evidence/rendered/ugly-login-mobile-390x844.png" alt="rainbow-chaos 丑登录页移动端案例" width="390">
-</p>
 
 ## redact-sensitive-content
 
@@ -48,7 +23,7 @@ ln -s "$(pwd)/skills/design-language-learning-plan" ~/.codex/skills/design-langu
 
 `recreate-webpage` 面向交互级网页复刻，输出前端项目、交互回放证据和同视口视觉差异报告。
 
-仓库包含三个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差，Osty 使用 React/CSS 完整复刻创意作品集首页。
+仓库同时包含两个真实验证样例：TRAE 首屏使用 Three.js 流体像素场，Jufcloud 首屏使用角色与多图层 CSS 3D 鼠标视差。两个样例都只复刻横幅，不包含后续页面内容。
 
 ![复刻页面桌面首屏](./evidence/rendered/trae-route-1440x900.png)
 
@@ -135,14 +110,13 @@ npm run dev
 
 - TRAE：`http://127.0.0.1:5173/trae/`（根路径默认也是 TRAE）
 - Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
-- Osty 创意作品集首页：`http://127.0.0.1:5173/osty/`
 
 在线演示：
 
 - TRAE：<http://38.76.205.234/trae/>
 - Jufcloud 二次元 3D：<http://38.76.205.234/jufcloud/>
 
-Demo 的“原网站”按钮会在新标签页打开对应参考站。服务器使用 [`deploy/nginx-recreate-demo.conf`](./deploy/nginx-recreate-demo.conf) 提供静态文件和 SPA 路由回退；Osty 本地视觉验收见 [`evidence/osty-fidelity-ledger.md`](./evidence/osty-fidelity-ledger.md)。
+两个 Demo 右侧的“原网站”按钮会在新标签页打开对应参考站。服务器使用 [`deploy/nginx-recreate-demo.conf`](./deploy/nginx-recreate-demo.conf) 提供静态文件和 SPA 路由回退；部署验收记录见 [`evidence/deployment-fidelity-ledger.md`](./evidence/deployment-fidelity-ledger.md)。
 
 质量检查：
 
@@ -167,10 +141,8 @@ python skills/recreate-webpage/scripts/compare_images.py \
 skills/recreate-webpage/          # 可安装 Skill、脚本和参考规范
 skills/redact-sensitive-content/  # 图片与网页截图打码 Skill
 skills/uglify-webpage/            # 故意反协调但功能正常的网页 Skill
-skills/design-language-learning-plan/ # 语言学习诊断、证据边界与英语/雅思训练方案
-src/                              # TRAE、Jufcloud 与 Osty React 样例
+src/                              # TRAE 与 Jufcloud 两个 React 横幅样例
 public/assets/jufcloud/           # Jufcloud 验证样例公开页面资产
-public/assets/osty/               # Osty 首页公开图片与字体资源
 evidence/reference/               # 参考页同视口证据
 evidence/rendered/                # 本地实现截图和差异图
 deploy/                           # 不含凭据的 Nginx 部署配置

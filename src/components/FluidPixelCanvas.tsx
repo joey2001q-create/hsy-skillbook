@@ -10,16 +10,7 @@ const vertexShader = `
   }
 `
 
-const fragmentShader = `
-  precision highp float;
-
-  uniform float uTime;
-  uniform vec2 uResolution;
-  uniform vec2 uMouse;
-  varying vec2 vUv;
-
-  const vec3 green = vec3(0.196078, 0.941176, 0.549020);
-
+const noiseFunctions = `
   vec2 hash(vec2 p) {
     p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3)));
     return -1.0 + 2.0 * fract(sin(p) * 43758.5453123);
@@ -53,23 +44,47 @@ const fragmentShader = `
     }
     return value * 0.5 + 0.5;
   }
+`
+
+const fluidFragmentShader = `
+  precision highp float;
+
+  uniform float uTime;
+  uniform float uSpeed;
+  uniform float uDensity;
+  uniform float uFrequency;
+  uniform vec3 uColor1;
+  uniform vec3 uColor2;
+  varying vec2 vUv;
+
+  ${noiseFunctions}
+
+  void main() {
+    float t = uTime * uSpeed;
+    vec2 q = vec2(
+      fbm(vUv * uDensity + vec2(0.0, 0.2 * t)),
+      fbm(vUv * uDensity + vec2(1.2, -0.3 * t))
+    );
+    float value = fbm(vUv * uDensity + q * uFrequency);
+    gl_FragColor = vec4(mix(uColor1, uColor2, value), 1.0);
+  }
+`
+
+const pixelFragmentShader = `
+  precision highp float;
+
+  uniform sampler2D uFluidTexture;
+  uniform float uTime;
+  uniform vec2 uResolution;
+  uniform vec2 uMouse;
+  varying vec2 vUv;
+
+  const vec3 green = vec3(0.196078, 0.941176, 0.549020);
+
+  ${noiseFunctions}
 
   float random(vec2 st) {
     return fract(sin(dot(st, vec2(12.9898, 78.233))) * 43758.5453123);
-  }
-
-  vec2 fluidWarp(vec2 uv) {
-    float t = uTime * 0.18;
-    return vec2(
-      fbm(uv * 0.5 + vec2(0.0, 0.2 * t)),
-      fbm(uv * 0.5 + vec2(1.2, -0.3 * t))
-    );
-  }
-
-  vec3 fluidColor(vec2 uv) {
-    vec2 q = fluidWarp(uv);
-    float value = fbm(uv * 0.5 + q * 4.0);
-    return mix(green, vec3(1.0), value);
   }
 
   vec2 pixelFlow(vec2 uv) {
@@ -106,7 +121,7 @@ const fragmentShader = `
     vec2 blockCenter = blockPos + vec2(pixelSize * 0.5);
     vec2 blockCenterUv = blockCenter / uResolution;
     vec2 sampleUv = (blockCenter - pixelFlow(blockCenterUv) * 35.0) / uResolution;
-    vec3 source = fluidColor(sampleUv);
+    vec3 source = texture2D(uFluidTexture, sampleUv).rgb;
     float brightness = (source.r + source.g + source.b) / 3.0;
     float rand = random(blockId);
     float dynamicThreshold = threshold - 0.08 * rand;
@@ -141,62 +156,106 @@ export function FluidPixelCanvas() {
     renderer.setClearColor(0x000000, 1)
     host.appendChild(renderer.domElement)
 
-    const scene = new THREE.Scene()
     const camera = new THREE.Camera()
+    const geometry = new THREE.PlaneGeometry(2, 2)
     const resolution = new THREE.Vector2(1, 1)
+    const drawingBufferSize = new THREE.Vector2(1, 1)
     const pointer = new THREE.Vector2(0.5, 0.5)
-    const easedPointer = pointer.clone()
-    const material = new THREE.ShaderMaterial({
+    const fluidTarget = new THREE.WebGLRenderTarget(1, 1, {
+      depthBuffer: false,
+      stencilBuffer: false,
+      minFilter: THREE.LinearFilter,
+      magFilter: THREE.LinearFilter,
+    })
+
+    const fluidMaterial = new THREE.ShaderMaterial({
       uniforms: {
         uTime: { value: 0 },
-        uResolution: { value: resolution },
-        uMouse: { value: easedPointer },
+        uSpeed: { value: 0.18 },
+        uDensity: { value: 0.5 },
+        uFrequency: { value: 4.0 },
+        uColor1: { value: new THREE.Color(0.196, 0.941, 0.549) },
+        uColor2: { value: new THREE.Color(1, 1, 1) },
       },
       vertexShader,
-      fragmentShader,
+      fragmentShader: fluidFragmentShader,
       depthTest: false,
       depthWrite: false,
     })
-    const geometry = new THREE.PlaneGeometry(2, 2)
-    const mesh = new THREE.Mesh(geometry, material)
-    scene.add(mesh)
+    const pixelMaterial = new THREE.ShaderMaterial({
+      uniforms: {
+        uFluidTexture: { value: fluidTarget.texture },
+        uTime: { value: 0 },
+        uResolution: { value: resolution },
+        uMouse: { value: pointer },
+      },
+      vertexShader,
+      fragmentShader: pixelFragmentShader,
+      depthTest: false,
+      depthWrite: false,
+    })
+
+    const fluidScene = new THREE.Scene()
+    fluidScene.add(new THREE.Mesh(geometry, fluidMaterial))
+    const pixelScene = new THREE.Scene()
+    pixelScene.add(new THREE.Mesh(geometry, pixelMaterial))
 
     const resize = () => {
       const width = Math.max(1, host.clientWidth)
       const height = Math.max(1, host.clientHeight)
       renderer.setSize(width, height, false)
+      renderer.getDrawingBufferSize(drawingBufferSize)
+      fluidTarget.setSize(drawingBufferSize.x, drawingBufferSize.y)
       resolution.set(width, height)
     }
     const resizeObserver = new ResizeObserver(resize)
     resizeObserver.observe(host)
     resize()
 
-    const onPointerMove = (event: PointerEvent) => {
-      const rect = host.getBoundingClientRect()
-      pointer.set(
-        THREE.MathUtils.clamp((event.clientX - rect.left) / rect.width, 0, 1),
-        THREE.MathUtils.clamp(1 - (event.clientY - rect.top) / rect.height, 0, 1),
-      )
-    }
-    host.addEventListener('pointermove', onPointerMove, { passive: true })
-
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const startedAt = performance.now()
+    let previousFrameAt = startedAt
+    let pixelTime = 0
+    let frameCount = 0
     let animationFrame = 0
+
+    const renderFrame = (now: number) => {
+      const delta = Math.max(0, (now - previousFrameAt) / 1000)
+      previousFrameAt = now
+      fluidMaterial.uniforms.uTime.value = reducedMotion ? 0.45 : (now - startedAt) / 1000
+      frameCount += 1
+      if (!reducedMotion && frameCount % 2 === 0) pixelTime += delta
+      pixelMaterial.uniforms.uTime.value = reducedMotion ? 0.45 : pixelTime
+
+      renderer.setRenderTarget(fluidTarget)
+      renderer.render(fluidScene, camera)
+      renderer.setRenderTarget(null)
+      renderer.render(pixelScene, camera)
+    }
+
+    const onPointerMove = (event: MouseEvent) => {
+      pointer.set(
+        THREE.MathUtils.clamp(event.clientX / window.innerWidth, 0, 1),
+        THREE.MathUtils.clamp(1 - event.clientY / window.innerHeight, 0, 1),
+      )
+      if (reducedMotion) renderFrame(performance.now())
+    }
+    window.addEventListener('mousemove', onPointerMove, { passive: true })
+
     const render = (now: number) => {
-      material.uniforms.uTime.value = reducedMotion ? 0.45 : (now - startedAt) / 1000
-      easedPointer.lerp(pointer, 0.08)
-      renderer.render(scene, camera)
+      renderFrame(now)
       if (!reducedMotion) animationFrame = requestAnimationFrame(render)
     }
     animationFrame = requestAnimationFrame(render)
 
     return () => {
       cancelAnimationFrame(animationFrame)
-      host.removeEventListener('pointermove', onPointerMove)
+      window.removeEventListener('mousemove', onPointerMove)
       resizeObserver.disconnect()
       geometry.dispose()
-      material.dispose()
+      fluidMaterial.dispose()
+      pixelMaterial.dispose()
+      fluidTarget.dispose()
       renderer.dispose()
       renderer.domElement.remove()
     }

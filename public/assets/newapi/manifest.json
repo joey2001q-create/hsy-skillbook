@@ -1,0 +1,669 @@
+{
+  "assets": [
+    {
+      "contentType": "font/woff2",
+      "id": "da002e257477f979",
+      "kind": "font",
+      "name": "387c923d20582ec7-s.p.1bnzik5pl4v0-.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/da002e257477f979.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/387c923d20582ec7-s.p.1bnzik5pl4v0-.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "bb1a12b11fede5e1",
+      "kind": "font",
+      "name": "536b4d72a397ec90-s.p.27c8-9qx-v7kc.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/bb1a12b11fede5e1.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/536b4d72a397ec90-s.p.27c8-9qx-v7kc.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "cb0e22cb3992e4e1",
+      "kind": "font",
+      "name": "5f58f544217b9ef1-s.p.1tzb_bp7vlor-.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/cb0e22cb3992e4e1.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/5f58f544217b9ef1-s.p.1tzb_bp7vlor-.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "2938e802c87fa4df",
+      "kind": "font",
+      "name": "83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/2938e802c87fa4df.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "60838e60a586524b",
+      "kind": "font",
+      "name": "8e6fa89aa22d24ec-s.p.2o7m9ogm38dql.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/60838e60a586524b.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/8e6fa89aa22d24ec-s.p.2o7m9ogm38dql.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "ab317c2dcd321bf8",
+      "kind": "font",
+      "name": "a218039a3287bcfd-s.p.43zbiuwnnoiok.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ab317c2dcd321bf8.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/a218039a3287bcfd-s.p.43zbiuwnnoiok.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "b2c99d0557f02ea8",
+      "kind": "font",
+      "name": "b0fb7b4004470e87-s.p.2o35gi0pd5-30.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/b2c99d0557f02ea8.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/b0fb7b4004470e87-s.p.2o35gi0pd5-30.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "f8495051a09252af",
+      "kind": "font",
+      "name": "e8f2fbee2754df70-s.p.1dqa_6e_ad4sj.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/f8495051a09252af.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/e8f2fbee2754df70-s.p.1dqa_6e_ad4sj.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "78170fdca4019ec9",
+      "kind": "font",
+      "name": "caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/78170fdca4019ec9.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "40ec0a6e3b65346b",
+      "kind": "font",
+      "name": "ce62453a442c7f35-s.p.0a0h245ktd4x0.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/40ec0a6e3b65346b.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/ce62453a442c7f35-s.p.0a0h245ktd4x0.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "259ebc22f5c022f5",
+      "kind": "font",
+      "name": "e2334d715941921e-s.p.3o_v2fun1jzxk.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/259ebc22f5c022f5.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/e2334d715941921e-s.p.3o_v2fun1jzxk.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "022c19c5ab86de11",
+      "kind": "font",
+      "name": "f05228a5f9ec0eae-s.p.3kxgs-7nixrf6.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/022c19c5ab86de11.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/f05228a5f9ec0eae-s.p.3kxgs-7nixrf6.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "51029011edbcd1e0",
+      "kind": "font",
+      "name": "feb57b2dc8f29018-s.p.3qy4m29-cg3o4.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/51029011edbcd1e0.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/feb57b2dc8f29018-s.p.3qy4m29-cg3o4.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "482ea28f91f9ef54",
+      "kind": "font",
+      "name": "fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/482ea28f91f9ef54.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2"
+    },
+    {
+      "contentType": "text/css",
+      "id": "309a5f75c1f57434",
+      "kind": "stylesheet",
+      "name": "1fujrned2bahn.css",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/309a5f75c1f57434.css",
+      "url": "https://www.newapi.ai/_next/static/chunks/1fujrned2bahn.css"
+    },
+    {
+      "contentType": "text/css",
+      "id": "c8ab816210e0f8d9",
+      "kind": "stylesheet",
+      "name": "3eg4kdd0z_-6d.css",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/c8ab816210e0f8d9.css",
+      "url": "https://www.newapi.ai/_next/static/chunks/3eg4kdd0z_-6d.css"
+    },
+    {
+      "contentType": "text/css",
+      "id": "e08bc74e30ae8478",
+      "kind": "stylesheet",
+      "name": "2yyx0x9c2f-xi.css",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/e08bc74e30ae8478.css",
+      "url": "https://www.newapi.ai/_next/static/chunks/2yyx0x9c2f-xi.css"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "f76d3ba9eb1b3c6e",
+      "kind": "image",
+      "name": "langchain.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/f76d3ba9eb1b3c6e.svg",
+      "url": "https://www.newapi.ai/logos/langchain.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "8d88587afef9d6ea",
+      "kind": "image",
+      "name": "cline.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/8d88587afef9d6ea.svg",
+      "url": "https://www.newapi.ai/logos/cline.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "f4782670cb08cf21",
+      "kind": "image",
+      "name": "openwebui.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/f4782670cb08cf21.svg",
+      "url": "https://www.newapi.ai/logos/openwebui.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "070d5b2f177f6204",
+      "kind": "image",
+      "name": "dify.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/070d5b2f177f6204.svg",
+      "url": "https://www.newapi.ai/logos/dify.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "379584f7b145a11b",
+      "kind": "image",
+      "name": "lobehub.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/379584f7b145a11b.svg",
+      "url": "https://www.newapi.ai/logos/lobehub.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3a6057403aecf7f4",
+      "kind": "image",
+      "name": "cherrystudio.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/3a6057403aecf7f4.svg",
+      "url": "https://www.newapi.ai/logos/cherrystudio.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "d703a40647046947",
+      "kind": "image",
+      "name": "fastgpt.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/d703a40647046947.svg",
+      "url": "https://www.newapi.ai/logos/fastgpt.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "0be1df76776fdec1",
+      "kind": "image",
+      "name": "n8n.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/0be1df76776fdec1.svg",
+      "url": "https://www.newapi.ai/logos/n8n.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4aa6bc93cf40dc5b",
+      "kind": "image",
+      "name": "roocode.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/4aa6bc93cf40dc5b.svg",
+      "url": "https://www.newapi.ai/logos/roocode.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "89cec067c33514c7",
+      "kind": "image",
+      "name": "coze.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/89cec067c33514c7.svg",
+      "url": "https://www.newapi.ai/logos/coze.svg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "2211f746c044712a",
+      "kind": "image",
+      "name": "cherrystudio.png",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/2211f746c044712a.png",
+      "url": "https://www.newapi.ai/logos/cherrystudio.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "f0e6a6608c6249f7",
+      "kind": "image",
+      "name": "aionui.png",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/f0e6a6608c6249f7.png",
+      "url": "https://www.newapi.ai/logos/aionui.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "24459d12f515e476",
+      "kind": "image",
+      "name": "pku.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/24459d12f515e476.svg",
+      "url": "https://www.newapi.ai/logos/pku.svg"
+    },
+    {
+      "contentType": "image/png",
+      "id": "3076a3d564a4ae59",
+      "kind": "image",
+      "name": "ucloud.png",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/3076a3d564a4ae59.png",
+      "url": "https://www.newapi.ai/logos/ucloud.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e58900f9b61abb8b",
+      "kind": "image",
+      "name": "alibabacloud.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/e58900f9b61abb8b.svg",
+      "url": "https://www.newapi.ai/logos/alibabacloud.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "a0dbd8ec8ceef9e4",
+      "kind": "image",
+      "name": "ionet.svg",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/a0dbd8ec8ceef9e4.svg",
+      "url": "https://www.newapi.ai/logos/ionet.svg"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "8ebb3534828ca998",
+      "kind": "font",
+      "name": "cf8014318d346492-s.26w60_oell4r-.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/8ebb3534828ca998.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/cf8014318d346492-s.26w60_oell4r-.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "b44ae133c393d4f7",
+      "kind": "font",
+      "name": "b694238d00eb3ad0-s.2xndrk4fkfcv3.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/b44ae133c393d4f7.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/b694238d00eb3ad0-s.2xndrk4fkfcv3.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "ec8462adfdfc3080",
+      "kind": "font",
+      "name": "6664a1d45ca5c0c2-s.2hv8tef0cbcdh.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ec8462adfdfc3080.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/6664a1d45ca5c0c2-s.2hv8tef0cbcdh.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "bc96881e8ac0735b",
+      "kind": "font",
+      "name": "55fbca23cda84d4b-s.123o6nj8m2hyq.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/bc96881e8ac0735b.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/55fbca23cda84d4b-s.123o6nj8m2hyq.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "2b8ca7897aa67b5c",
+      "kind": "font",
+      "name": "135576b9d01c4b39-s.3qa9g1t5kaas4.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/2b8ca7897aa67b5c.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/135576b9d01c4b39-s.3qa9g1t5kaas4.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "83a93aacd5fc3d2d",
+      "kind": "font",
+      "name": "f097c0c87c80a694-s.04ox99vm7q94q.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/83a93aacd5fc3d2d.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/f097c0c87c80a694-s.04ox99vm7q94q.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "09ac8740df70b4ef",
+      "kind": "font",
+      "name": "7ddd7ef0f7ce263c-s.0layj7xgf9jli.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/09ac8740df70b4ef.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/7ddd7ef0f7ce263c-s.0layj7xgf9jli.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "1e906f2e6ff29f56",
+      "kind": "font",
+      "name": "ef3b518d6617cd82-s.01akdvx07ffts.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/1e906f2e6ff29f56.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/ef3b518d6617cd82-s.01akdvx07ffts.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "c5262ea992a6fccd",
+      "kind": "font",
+      "name": "2a9b0f6275915b89-s.05z3-qzuhdj70.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/c5262ea992a6fccd.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/2a9b0f6275915b89-s.05z3-qzuhdj70.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "c62ee011ad4359ef",
+      "kind": "font",
+      "name": "786499580e4e2488-s.1n2iv6lyw880l.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/c62ee011ad4359ef.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/786499580e4e2488-s.1n2iv6lyw880l.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "8c8196fcb9f1d907",
+      "kind": "font",
+      "name": "a819f8ce850e4ae0-s.1mhbl7mu6hk-b.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/8c8196fcb9f1d907.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/a819f8ce850e4ae0-s.1mhbl7mu6hk-b.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "d1c4a9a318978aec",
+      "kind": "font",
+      "name": "2b8afc1b081e91c9-s.07k4_cj8_lxzp.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/d1c4a9a318978aec.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/2b8afc1b081e91c9-s.07k4_cj8_lxzp.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "23f1c843e68fe0d4",
+      "kind": "font",
+      "name": "20f0fe0be5757f04-s.08rr51u993m4-.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/23f1c843e68fe0d4.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/20f0fe0be5757f04-s.08rr51u993m4-.woff2"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "13774d288ae36ea7",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/13774d288ae36ea7",
+      "url": "https://www.newapi.ai/_next/image?url=%2Flogo.png&w=48&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "52a63677f422e19c",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/52a63677f422e19c",
+      "url": "https://www.newapi.ai/_next/image?url=%2Flogo.png&w=32&q=75"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "ff797e2a64635827",
+      "kind": "font",
+      "name": "b62a8abe3e9a7b5a-s.1lnzj2t1bolhu.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ff797e2a64635827.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/b62a8abe3e9a7b5a-s.1lnzj2t1bolhu.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "24a4492fa61620e6",
+      "kind": "font",
+      "name": "974f848093d21b8d-s.2_o4bcqs8a2n5.woff2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/24a4492fa61620e6.woff2",
+      "url": "https://www.newapi.ai/_next/static/media/974f848093d21b8d-s.2_o4bcqs8a2n5.woff2"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "26f559e266b6649d",
+      "kind": "image",
+      "name": "svg-1",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/26f559e266b6649d.svg",
+      "url": "inline-svg:26f559e266b6649d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "dceb723682013a23",
+      "kind": "image",
+      "name": "svg-2",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/dceb723682013a23.svg",
+      "url": "inline-svg:dceb723682013a23"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "c373eaf19216048f",
+      "kind": "image",
+      "name": "svg-3",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/c373eaf19216048f.svg",
+      "url": "inline-svg:c373eaf19216048f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "59f946c74da6e9fc",
+      "kind": "image",
+      "name": "svg-4",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/59f946c74da6e9fc.svg",
+      "url": "inline-svg:59f946c74da6e9fc"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "de79c90159510e77",
+      "kind": "image",
+      "name": "svg-5",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/de79c90159510e77.svg",
+      "url": "inline-svg:de79c90159510e77"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4481d24d21ec7ab0",
+      "kind": "image",
+      "name": "svg-6",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/4481d24d21ec7ab0.svg",
+      "url": "inline-svg:4481d24d21ec7ab0"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "dcec4265a0716b20",
+      "kind": "image",
+      "name": "svg-7",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/dcec4265a0716b20.svg",
+      "url": "inline-svg:dcec4265a0716b20"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "425547f8dbb81a87",
+      "kind": "image",
+      "name": "svg-8",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/425547f8dbb81a87.svg",
+      "url": "inline-svg:425547f8dbb81a87"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ea83fd5b3db0f023",
+      "kind": "image",
+      "name": "svg-9",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ea83fd5b3db0f023.svg",
+      "url": "inline-svg:ea83fd5b3db0f023"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "c9fdd5151d90177d",
+      "kind": "image",
+      "name": "svg-10",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/c9fdd5151d90177d.svg",
+      "url": "inline-svg:c9fdd5151d90177d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6dd68e2db8eca3e4",
+      "kind": "image",
+      "name": "svg-11",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/6dd68e2db8eca3e4.svg",
+      "url": "inline-svg:6dd68e2db8eca3e4"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4b961c44a3d026b1",
+      "kind": "image",
+      "name": "OpenAI",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/4b961c44a3d026b1.svg",
+      "url": "inline-svg:4b961c44a3d026b1"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ab839f5a9e4d3d09",
+      "kind": "image",
+      "name": "Anthropic",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ab839f5a9e4d3d09.svg",
+      "url": "inline-svg:ab839f5a9e4d3d09"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3bc916143e34d4ae",
+      "kind": "image",
+      "name": "Google Gemini",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/3bc916143e34d4ae.svg",
+      "url": "inline-svg:3bc916143e34d4ae"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6100162baf3cf91c",
+      "kind": "image",
+      "name": "DeepSeek",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/6100162baf3cf91c.svg",
+      "url": "inline-svg:6100162baf3cf91c"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "2d57dcc6fcfb5753",
+      "kind": "image",
+      "name": "Meta",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/2d57dcc6fcfb5753.svg",
+      "url": "inline-svg:2d57dcc6fcfb5753"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "caa43c6c5b6a04ff",
+      "kind": "image",
+      "name": "svg-17",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/caa43c6c5b6a04ff.svg",
+      "url": "inline-svg:caa43c6c5b6a04ff"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "268fb68dd2944ec0",
+      "kind": "image",
+      "name": "svg-18",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/268fb68dd2944ec0.svg",
+      "url": "inline-svg:268fb68dd2944ec0"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "01e1e628bcb282df",
+      "kind": "image",
+      "name": "svg-19",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/01e1e628bcb282df.svg",
+      "url": "inline-svg:01e1e628bcb282df"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "90e8a837a0f775af",
+      "kind": "image",
+      "name": "svg-20",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/90e8a837a0f775af.svg",
+      "url": "inline-svg:90e8a837a0f775af"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b3370b25a0782063",
+      "kind": "image",
+      "name": "svg-21",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/b3370b25a0782063.svg",
+      "url": "inline-svg:b3370b25a0782063"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "9ca7b1a41b350c7f",
+      "kind": "image",
+      "name": "svg-22",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/9ca7b1a41b350c7f.svg",
+      "url": "inline-svg:9ca7b1a41b350c7f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b8487a17c4097b66",
+      "kind": "image",
+      "name": "svg-23",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/b8487a17c4097b66.svg",
+      "url": "inline-svg:b8487a17c4097b66"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "9295a655fb1b197b",
+      "kind": "image",
+      "name": "svg-24",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/9295a655fb1b197b.svg",
+      "url": "inline-svg:9295a655fb1b197b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "02c086620c148fc8",
+      "kind": "image",
+      "name": "svg-25",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/02c086620c148fc8.svg",
+      "url": "inline-svg:02c086620c148fc8"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "cfb3dfe10c9fda07",
+      "kind": "image",
+      "name": "svg-26",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/cfb3dfe10c9fda07.svg",
+      "url": "inline-svg:cfb3dfe10c9fda07"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ab24f14e1172ed73",
+      "kind": "image",
+      "name": "svg-27",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ab24f14e1172ed73.svg",
+      "url": "inline-svg:ab24f14e1172ed73"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "79bc2115d36f32c2",
+      "kind": "image",
+      "name": "svg-28",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/79bc2115d36f32c2.svg",
+      "url": "inline-svg:79bc2115d36f32c2"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5b946031526cc00b",
+      "kind": "image",
+      "name": "svg-29",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/5b946031526cc00b.svg",
+      "url": "inline-svg:5b946031526cc00b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ab6b134f7c80fd0d",
+      "kind": "image",
+      "name": "svg-30",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ab6b134f7c80fd0d.svg",
+      "url": "inline-svg:ab6b134f7c80fd0d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "22f4f50b81bc02a1",
+      "kind": "image",
+      "name": "svg-31",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/22f4f50b81bc02a1.svg",
+      "url": "inline-svg:22f4f50b81bc02a1"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ddf5be213ae1e520",
+      "kind": "image",
+      "name": "svg-32",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/ddf5be213ae1e520.svg",
+      "url": "inline-svg:ddf5be213ae1e520"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4fd9f0c458b8b43b",
+      "kind": "image",
+      "name": "svg-33",
+      "path": "/var/folders/1b/bxmnw59x2gqdms3wd7tcj0c00000gn/T/browser-use/assets/fb39e3d6-fa54-4a61-95ee-7158b3b235d3/4fd9f0c458b8b43b.svg",
+      "url": "inline-svg:4fd9f0c458b8b43b"
+    }
+  ],
+  "failures": []
+}
