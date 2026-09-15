@@ -108,7 +108,8 @@ npm run dev
 
 浏览器入口：
 
-- TRAE：`http://127.0.0.1:5173/trae/`（根路径默认也是 TRAE）
+- 案例展厅：`http://127.0.0.1:5173/`
+- TRAE：`http://127.0.0.1:5173/trae/`
 - Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
 
 在线演示：
@@ -143,7 +144,7 @@ python skills/recreate-webpage/scripts/compare_images.py \
 skills/recreate-webpage/          # 可安装 Skill、脚本和参考规范
 skills/redact-sensitive-content/  # 图片与网页截图打码 Skill
 skills/uglify-webpage/            # 故意反协调但功能正常的网页 Skill
-src/                              # TRAE 与 Jufcloud 两个 React 横幅样例
+src/                              # 案例展厅与各个 React 复刻样例
 public/assets/jufcloud/           # Jufcloud 验证样例公开页面资产
 evidence/reference/               # 参考页同视口证据
 evidence/rendered/                # 本地实现截图和差异图
