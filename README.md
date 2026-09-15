@@ -113,6 +113,8 @@ npm run dev
 
 在线演示：
 
+- 复刻案例展厅：<https://hsy-skillbook-showcase.vercel.app/>
+- 展厅内包含 TRAE、Jufcloud、New API、Osty 四个案例；点击卡片进入详情，点击“原网站”打开参考站。
 - TRAE：<http://38.76.205.234/trae/>
 - Jufcloud 二次元 3D：<http://38.76.205.234/jufcloud/>
 

@@ -7,6 +7,7 @@ const OstyHome = lazy(() => import('./components/osty/OstyHome').then((module) =
 const UglyLogin = lazy(() => import('./components/UglyLogin').then((module) => ({ default: module.UglyLogin })))
 const UglyPortal = lazy(() => import('./components/UglyPortal').then((module) => ({ default: module.UglyPortal })))
 const NewApiHome = lazy(() => import('./components/NewApiHome').then((module) => ({ default: module.NewApiHome })))
+const RecreationGallery = lazy(() => import('./components/RecreationGallery').then((module) => ({ default: module.RecreationGallery })))
 
 function App() {
   const pathname = window.location.pathname.toLowerCase()
@@ -15,6 +16,7 @@ function App() {
   const isUglyLogin = pathname.startsWith('/ugly-login')
   const isUglyPortal = pathname.startsWith('/ugly-portal')
   const isNewApi = pathname.startsWith('/newapi')
+  const isGallery = pathname === '/' || pathname === '/index.html' || pathname.startsWith('/demos')
   const sourceSiteUrl = isOsty
     ? 'https://theme.madsparrow.me/osty/?storefront=envato-elements'
     : isJufcloud
@@ -23,7 +25,9 @@ function App() {
   const sourceSiteName = isOsty ? 'Osty' : isJufcloud ? 'Jufcloud' : 'TRAE'
 
   useEffect(() => {
-    document.title = isOsty
+    document.title = isGallery
+      ? '复刻台 · 交互级网页复刻案例'
+      : isOsty
       ? 'Osty · Creative Agency and Portfolio'
       : isUglyPortal
       ? '破浪门户网 · 静态门户展示'
@@ -34,7 +38,11 @@ function App() {
       : isJufcloud
         ? '桔风云 · 3D 横幅复刻样例'
         : 'TRAE · 首页交互复刻样例'
-  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty])
+  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty, isGallery])
+
+  if (isGallery) {
+    return <Suspense fallback={<div className="route-loading" aria-label="案例列表加载中" />}><RecreationGallery /></Suspense>
+  }
 
   if (isOsty) {
     return (
@@ -74,9 +82,10 @@ function App() {
 
   if (isNewApi) {
     return (
-      <Suspense fallback={<div className="route-loading" aria-label="New API 页面加载中" />}>
-        <NewApiHome />
-      </Suspense>
+      <div className="site-stage site-stage-newapi">
+        <Suspense fallback={<div className="route-loading" aria-label="New API 页面加载中" />}><NewApiHome /></Suspense>
+        <a className="source-site-link source-site-link-newapi" href="https://www.newapi.ai/" target="_blank" rel="noreferrer" aria-label="在新标签页打开 New API 原网站"><span>原网站</span><ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" /></a>
+      </div>
     )
   }
 

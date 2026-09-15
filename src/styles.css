@@ -70,6 +70,8 @@ h1, h2, h3, h4, p, figure { margin: 0; }
   box-shadow: 0 12px 34px rgba(38, 38, 38, .16);
 }
 .source-site-link-osty:hover { background: #ffd58d; }
+.source-site-link-newapi { color: #fff; border-color: rgba(255, 255, 255, .18); background: rgba(18, 20, 27, .78); }
+.source-site-link-newapi:hover { border-color: rgba(255, 255, 255, .36); background: rgba(49, 78, 170, .92); }
 
 @media (max-width: 743px) {
   .source-site-link {
