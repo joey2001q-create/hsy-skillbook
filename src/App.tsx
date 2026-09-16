@@ -8,6 +8,7 @@ const UglyLogin = lazy(() => import('./components/UglyLogin').then((module) => (
 const UglyPortal = lazy(() => import('./components/UglyPortal').then((module) => ({ default: module.UglyPortal })))
 const NewApiHome = lazy(() => import('./components/NewApiHome').then((module) => ({ default: module.NewApiHome })))
 const RecreationGallery = lazy(() => import('./components/RecreationGallery').then((module) => ({ default: module.RecreationGallery })))
+const HeybikeHome = lazy(() => import('./components/heybike/HeybikeHome').then((module) => ({ default: module.HeybikeHome })))
 
 function App() {
   const pathname = window.location.pathname.toLowerCase()
@@ -16,6 +17,7 @@ function App() {
   const isUglyLogin = pathname.startsWith('/ugly-login')
   const isUglyPortal = pathname.startsWith('/ugly-portal')
   const isNewApi = pathname.startsWith('/newapi')
+  const isHeybike = pathname.startsWith('/heybike')
   const isGallery = pathname === '/' || pathname === '/index.html' || pathname.startsWith('/demos')
   const sourceSiteUrl = isOsty
     ? 'https://theme.madsparrow.me/osty/?storefront=envato-elements'
@@ -35,13 +37,24 @@ function App() {
       ? '彩虹通行证 · 丑登录页'
       : isNewApi
       ? '首页 | QN Platform'
+      : isHeybike
+      ? 'Heybike Electric Bikes | Home Recreation'
       : isJufcloud
         ? '桔风云 · 3D 横幅复刻样例'
         : 'TRAE · 首页交互复刻样例'
-  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty, isGallery])
+  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty, isGallery, isHeybike])
 
   if (isGallery) {
     return <Suspense fallback={<div className="route-loading" aria-label="案例列表加载中" />}><RecreationGallery /></Suspense>
+  }
+
+  if (isHeybike) {
+    return (
+      <div className="site-stage site-stage-heybike">
+        <Suspense fallback={<div className="route-loading" aria-label="Heybike 页面加载中" />}><HeybikeHome /></Suspense>
+        <a className="source-site-link source-site-link-heybike" href="https://www.heybike.com/" target="_blank" rel="noreferrer" aria-label="在新标签页打开 Heybike 原网站"><span>原网站</span><ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" /></a>
+      </div>
+    )
   }
 
   if (isOsty) {

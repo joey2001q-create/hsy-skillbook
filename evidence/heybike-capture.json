@@ -1,0 +1,60 @@
+{
+  "sourceUrl": "https://www.heybike.com/",
+  "capturedAt": "2026-09-17T03:20:00+08:00",
+  "scope": "公开首页；商品详情、真实购物车、账号、搜索和外部视频播放不在复刻范围内。",
+  "routes": ["/heybike/"],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "reference": "reference/heybike/desktop-initial-1440x900.png",
+      "rendered": "rendered/heybike/desktop-1440x900.png"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "reference": "reference/heybike/mobile-initial-390x844.png",
+      "rendered": "rendered/heybike/mobile-390x844.png"
+    }
+  ],
+  "fullPageEvidence": {
+    "reference": "reference/heybike/desktop-long-1440.png",
+    "rendered": "rendered/heybike/desktop-long-1440.png"
+  },
+  "interactions": [
+    {
+      "id": "desktop-navigation",
+      "result": "Ebikes 下拉菜单在点击/聚焦后可见",
+      "status": "verified"
+    },
+    {
+      "id": "product-carousel",
+      "result": "下一页按钮驱动商品轨道位移",
+      "status": "verified"
+    },
+    {
+      "id": "app-dialog",
+      "result": "下载 App 弹层可打开、关闭",
+      "status": "verified"
+    },
+    {
+      "id": "press-and-review-tabs",
+      "result": "媒体 Logo 与评测分类 aria-pressed 状态切换",
+      "status": "verified"
+    },
+    {
+      "id": "mobile-menu",
+      "result": "390x844 下菜单可打开、关闭，滚动锁定恢复正常",
+      "status": "verified"
+    },
+    {
+      "id": "mobile-promo",
+      "result": "促销圆点切换至 Ride Better Together",
+      "status": "verified"
+    }
+  ],
+  "console": { "errors": 0 },
+  "responsive": { "mobileHorizontalOverflow": false, "documentWidth": 390 }
+}

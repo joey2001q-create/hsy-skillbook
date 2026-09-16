@@ -17,6 +17,7 @@ const recreations: RecreationItem[] = [
   { title: 'Jufcloud 3D 横幅', subtitle: '二次元角色与鼠标视差', route: '/jufcloud/', source: 'https://www.jufcloud.com/', sourceLabel: 'jufcloud.com', image: '/assets/gallery/jufcloud.png', accent: 'cyan', tags: ['CSS 3D', '鼠标交互', '动态角色'] },
   { title: 'New API 首页', subtitle: 'AI 网关产品首页与主题切换', route: '/newapi/', source: 'https://www.newapi.ai/', sourceLabel: 'newapi.ai', image: '/assets/gallery/newapi.png', accent: 'blue', tags: ['Canvas', '深色主题', '长页面'] },
   { title: 'Osty 创意作品集', subtitle: '作品集首页与筛选交互', route: '/osty/', source: 'https://theme.madsparrow.me/osty/?storefront=envato-elements', sourceLabel: 'theme.madsparrow.me', image: '/assets/gallery/osty.png', accent: 'orange', tags: ['筛选', 'Hover', '移动端'] },
+  { title: 'Heybike 电商首页', subtitle: '电动自行车商城与响应式交互', route: '/heybike/', source: 'https://www.heybike.com/', sourceLabel: 'heybike.com', image: '/assets/gallery/heybike.png', accent: 'orange', tags: ['电商', '轮播', '响应式'] },
 ]
 
 export function RecreationGallery() {
@@ -33,7 +34,7 @@ export function RecreationGallery() {
           <div className="gallery-card-content"><div><p className="gallery-card-kicker">CASE {String(index + 1).padStart(2, '0')}</p><h2>{item.title}</h2><p className="gallery-card-subtitle">{item.subtitle}</p></div><div className="gallery-card-footer"><div className="gallery-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="gallery-source" href={item.source} target="_blank" rel="noreferrer" aria-label={`打开${item.sourceLabel}原网站`}>{item.sourceLabel} <ExternalLink size={13} /></a></div></div>
         </article>)}
       </section>
-      <footer className="gallery-footer"><span>4 个案例 · 持续增加中</span><span>Built with recreate-webpage Skill</span></footer>
+      <footer className="gallery-footer"><span>5 个案例 · 持续增加中</span><span>Built with recreate-webpage Skill</span></footer>
     </main>
   )
 }
