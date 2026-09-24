@@ -24,6 +24,7 @@ Read only the references needed for the current task, but always read the captur
 - **Canvas, WebGL, Three.js, Rive, Lottie, video, shaders, public runtime assets, or ambiguous implementation mechanism:** read [implementation-routing.md](references/implementation-routing.md).
 - **Existing recreation is incomplete, user reports missing content or rough interaction, or a prior pass must be corrected:** read [fidelity-recovery.md](references/fidelity-recovery.md).
 - **A prior pass received visual feedback or a boundary/detail was placed incorrectly:** also read [lessons-learned.md](references/lessons-learned.md).
+- **The requested scope is a homepage cover, hero, or banner with timed headline effects:** also read [hero-banner-fidelity.md](references/hero-banner-fidelity.md).
 - **Before handoff or any 1:1 claim:** read [fidelity-gates.md](references/fidelity-gates.md).
 
 ## Defaults
