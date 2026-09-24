@@ -112,12 +112,14 @@ npm run dev
 - TRAE：`http://127.0.0.1:5173/trae/`
 - Jufcloud 二次元 3D：`http://127.0.0.1:5173/jufcloud/`
 - Heybike 电商首页：`http://127.0.0.1:5173/heybike/`
+- Avada 动态横幅：`http://127.0.0.1:5173/avada/`
 
 在线演示：
 
 - 复刻案例展厅：<https://hsy-skillbook-showcase.vercel.app/>
-- 展厅内包含 TRAE、Jufcloud、New API、Osty、Heybike 五个案例；点击卡片进入详情，点击“原网站”打开参考站。
+- 展厅内包含 TRAE、Jufcloud、New API、Osty、Heybike、Avada 六个案例；点击卡片进入详情，点击“原网站”打开参考站。
 - Heybike：<https://hsy-skillbook-showcase.vercel.app/heybike/>
+- Avada：<https://hsy-skillbook-showcase.vercel.app/avada/>
 - TRAE：<http://38.76.205.234/trae/>
 - Jufcloud 二次元 3D：<http://38.76.205.234/jufcloud/>
 

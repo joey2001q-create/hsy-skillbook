@@ -1,0 +1,41 @@
+{
+  "sourceUrl": "https://avada.com/",
+  "capturedAt": "2026-09-24",
+  "scope": "仅复刻首页封面横幅（Header、Hero、动态标题、首屏统计和快捷入口）",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1,
+      "referenceHeight": 7157,
+      "renderedHeight": 782,
+      "referenceScreenshot": "evidence/reference/avada-desktop-no-cookie.png",
+      "renderedScreenshot": "evidence/rendered/avada-final-desktop.png",
+      "renderedSectionStarts": [0, 108]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1,
+      "referenceHeight": 12518,
+      "renderedHeight": 1005,
+      "referenceScreenshot": "evidence/reference/avada-mobile.png",
+      "renderedScreenshot": "evidence/rendered/avada-final-mobile.png",
+      "renderedSectionStarts": [0, 95]
+    }
+  ],
+  "font": "Basier Square Regular and Semi Bold",
+  "assets": "public/assets/avada/",
+  "interactionsVerified": ["rotating hero word", "mobile menu", "local hero CTA", "quick links return to top"],
+  "runtimeChecks": {
+    "horizontalOverflow": false,
+    "renderedScope": "hero-only",
+    "brokenImages": 0,
+    "pageErrors": 0,
+    "lint": "passed",
+    "build": "passed",
+    "diffCheck": "passed"
+  }
+}

@@ -9,6 +9,7 @@ const UglyPortal = lazy(() => import('./components/UglyPortal').then((module) =>
 const NewApiHome = lazy(() => import('./components/NewApiHome').then((module) => ({ default: module.NewApiHome })))
 const RecreationGallery = lazy(() => import('./components/RecreationGallery').then((module) => ({ default: module.RecreationGallery })))
 const HeybikeHome = lazy(() => import('./components/heybike/HeybikeHome').then((module) => ({ default: module.HeybikeHome })))
+const AvadaHome = lazy(() => import('./components/AvadaHome').then((module) => ({ default: module.AvadaHome })))
 
 function App() {
   const pathname = window.location.pathname.toLowerCase()
@@ -18,6 +19,7 @@ function App() {
   const isUglyPortal = pathname.startsWith('/ugly-portal')
   const isNewApi = pathname.startsWith('/newapi')
   const isHeybike = pathname.startsWith('/heybike')
+  const isAvada = pathname.startsWith('/avada')
   const isGallery = pathname === '/' || pathname === '/index.html' || pathname.startsWith('/demos')
   const sourceSiteUrl = isOsty
     ? 'https://theme.madsparrow.me/osty/?storefront=envato-elements'
@@ -38,11 +40,13 @@ function App() {
       : isNewApi
       ? '首页 | QN Platform'
       : isHeybike
-      ? 'Heybike Electric Bikes | Home Recreation'
+        ? 'Heybike Electric Bikes | Home Recreation'
+        : isAvada
+          ? 'Avada · The Ultimate Website Builder'
       : isJufcloud
         ? '桔风云 · 3D 横幅复刻样例'
         : 'TRAE · 首页交互复刻样例'
-  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty, isGallery, isHeybike])
+  }, [isJufcloud, isUglyLogin, isUglyPortal, isNewApi, isOsty, isGallery, isHeybike, isAvada])
 
   if (isGallery) {
     return <Suspense fallback={<div className="route-loading" aria-label="案例列表加载中" />}><RecreationGallery /></Suspense>
@@ -53,6 +57,14 @@ function App() {
       <div className="site-stage site-stage-heybike">
         <Suspense fallback={<div className="route-loading" aria-label="Heybike 页面加载中" />}><HeybikeHome /></Suspense>
         <a className="source-site-link source-site-link-heybike" href="https://www.heybike.com/" target="_blank" rel="noreferrer" aria-label="在新标签页打开 Heybike 原网站"><span>原网站</span><ExternalLink size={16} strokeWidth={1.8} aria-hidden="true" /></a>
+      </div>
+    )
+  }
+
+  if (isAvada) {
+    return (
+      <div className="site-stage site-stage-avada">
+        <Suspense fallback={<div className="route-loading" aria-label="Avada 页面加载中" />}><AvadaHome /></Suspense>
       </div>
     )
   }
